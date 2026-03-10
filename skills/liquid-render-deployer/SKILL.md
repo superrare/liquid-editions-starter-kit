@@ -9,6 +9,10 @@ description: Deploy, register, and verify Liquid Edition render contracts from t
 
 Use the repo's Foundry scripts and env conventions as the default deployment path.
 
+For most users, the easiest way to get the target Sepolia Liquid Edition is to create it first in:
+
+- `dev.superrare.com/create/liquid-edition`
+
 Deploy to Ethereum Sepolia first, verify the render contract and registration behavior, then move to Ethereum Mainnet once the output is correct.
 
 ## Start Here
@@ -65,6 +69,7 @@ Example-specific variables:
 Keep these rules visible:
 
 - Build and test before broadcasting.
+- The easiest Sepolia onboarding flow is: create the Liquid Edition in `dev.superrare.com/create/liquid-edition`, then use this repo to build and register the renderer.
 - Deploy to Sepolia before Mainnet unless the user explicitly wants otherwise.
 - A Liquid Edition can register only one render contract address.
 - Auto-registration only works if the broadcaster is also the Liquid token creator.
@@ -75,14 +80,17 @@ Keep these rules visible:
 
 Follow this sequence:
 
-1. Copy `.env.eth.sepolia` to `.env` for testing, or `.env.eth.mainnet` to `.env` for production.
-2. Run `forge build` and `forge test -vv`.
-3. Choose the matching deploy script for the contract pattern.
-4. Broadcast on Sepolia first.
-5. Check whether auto-registration succeeded or was skipped.
-6. If needed, register the render contract manually.
-7. Verify the stored render contract address and inspect `tokenURI()` output.
-8. Repeat on Mainnet only after the Sepolia result is correct.
+1. Create the Liquid Edition on Sepolia in `dev.superrare.com/create/liquid-edition`.
+2. Copy `.env.eth.sepolia` to `.env` for testing, or `.env.eth.mainnet` to `.env` for production.
+3. Set `LIQUID_EDITION_ADDRESS` to the deployed Liquid Edition address.
+4. Run `forge build` and `forge test -vv`.
+5. Choose the matching deploy script for the contract pattern.
+6. Broadcast on Sepolia first.
+7. Check whether auto-registration succeeded or was skipped.
+8. If needed, register the render contract manually.
+9. Verify the stored render contract address and inspect `tokenURI()` output.
+10. Open `dev.superrare.com/liquid-editions/11155111/<liquidEditionContractAddress>` to inspect the rendering in the UI.
+11. Repeat on Mainnet only after the Sepolia result is correct.
 
 ## Canonical Commands
 

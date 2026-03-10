@@ -75,6 +75,8 @@ Treat those `SKILL.md` files as shared workflow guidance for this repo, not as p
 
 Good default advice:
 
+- Before building a render contract, the easiest Sepolia path is to create the Liquid Edition at `dev.superrare.com/create/liquid-edition`.
+- After that, set `LIQUID_EDITION_ADDRESS` to the deployed Liquid Edition contract address and use this repo for the render contract.
 - Start from one example file, not from scratch.
 - Read `getMarketState()` and `getLaunchState()` first.
 - Keep the first render simple and legible.
@@ -133,11 +135,16 @@ These are enough to derive many higher-level signals:
 
 ## Deployment Guidance
 
+- For most users, the easiest Sepolia flow is: create the Liquid Edition first at `dev.superrare.com/create/liquid-edition`, then use this repo to build the render contract.
 - `script/DeployLiquidLensHTMLExample.s.sol`
 - `script/DeployLiquidLensMintable721SVGExample.s.sol`
 - `script/RegisterRenderContract.s.sol`
 
 Auto-registration only works when the broadcaster is the Liquid token creator.
+
+After the render contract is registered, the artist can inspect it in the UI at:
+
+- `dev.superrare.com/liquid-editions/11155111/<liquidEditionContractAddress>`
 
 ## Render Contract Minimum
 
@@ -160,3 +167,4 @@ Use:
 
 - the chain-specific env templates
 - `RPC_URL` from the copied `.env`
+- `dev.superrare.com/create/liquid-edition` as the easiest way to get a Sepolia Liquid Edition before building a renderer here
