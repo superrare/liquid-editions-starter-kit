@@ -186,7 +186,7 @@ Useful canonical addresses for this starter kit:
 ### Ethereum Mainnet
 
 - `RARE`: `0xba5BDe662c17e2aDFF1075610382B9B691296350`
-- `Liquid Factory`: `0xd3D8Ca76E8c5547694106378B6e471B4AC8EFC63`
+- `Liquid Factory`: `0xbb4341CFd588a098e9aCE1D224178836426c4a8E`
 
 ### Ethereum Sepolia
 
