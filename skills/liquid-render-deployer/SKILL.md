@@ -11,7 +11,7 @@ Use the repo's Foundry scripts and env conventions as the default deployment pat
 
 For most users, the easiest way to get the target Sepolia Liquid Edition is to create it first in:
 
-- `dev.superrare.com/create/liquid-edition`
+- `dev.superrare.co/create/liquid-edition`
 
 Deploy to Ethereum Sepolia first, verify the render contract and registration behavior, then move to Ethereum Mainnet once the output is correct.
 
@@ -69,7 +69,7 @@ Example-specific variables:
 Keep these rules visible:
 
 - Build and test before broadcasting.
-- The easiest Sepolia onboarding flow is: create the Liquid Edition in `dev.superrare.com/create/liquid-edition`, then use this repo to build and register the renderer.
+- The easiest Sepolia onboarding flow is: create the Liquid Edition in `dev.superrare.co/create/liquid-edition`, then use this repo to build and register the renderer.
 - Deploy to Sepolia before Mainnet unless the user explicitly wants otherwise.
 - A Liquid Edition can register only one render contract address.
 - Auto-registration only works if the broadcaster is also the Liquid token creator.
@@ -80,7 +80,7 @@ Keep these rules visible:
 
 Follow this sequence:
 
-1. Create the Liquid Edition on Sepolia in `dev.superrare.com/create/liquid-edition`.
+1. Create the Liquid Edition on Sepolia in `dev.superrare.co/create/liquid-edition`.
 2. Copy `.env.eth.sepolia` to `.env` for testing, or `.env.eth.mainnet` to `.env` for production.
 3. Set `LIQUID_EDITION_ADDRESS` to the deployed Liquid Edition address.
 4. Run `forge build` and `forge test -vv`.
@@ -89,7 +89,7 @@ Follow this sequence:
 7. Check whether auto-registration succeeded or was skipped.
 8. If needed, register the render contract manually.
 9. Verify the stored render contract address and inspect `tokenURI()` output.
-10. Open `dev.superrare.com/liquid-editions/11155111/<liquidEditionContractAddress>` to inspect the rendering in the UI.
+10. Open `dev.superrare.co/liquid-editions/11155111/<liquidEditionContractAddress>` to inspect the rendering in the UI.
 11. Repeat on Mainnet only after the Sepolia result is correct.
 
 ## Canonical Commands

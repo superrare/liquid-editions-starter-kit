@@ -359,7 +359,7 @@ Nothing breaks if the work stops changing. That is still a valid authored choice
 
 Before you build a render contract in this repo, the easiest path is to create your Liquid Edition in the SuperRare dev UI:
 
-- [dev.superrare.com/create/liquid-edition](https://dev.superrare.com/create/liquid-edition)
+- [dev.superrare.co/create/liquid-edition](https://dev.superrare.co/create/liquid-edition)
 
 This starter kit is primarily for the render contract that you attach afterward. In practice, the easiest flow is:
 
@@ -370,7 +370,7 @@ This starter kit is primarily for the render contract that you attach afterward.
 
 Once your render contract is registered, you can immediately inspect how the Liquid Edition renders in the UI at:
 
-- `https://dev.superrare.com/liquid-editions/11155111/<liquidEditionContractAddress>`
+- `https://dev.superrare.co/liquid-editions/11155111/<liquidEditionContractAddress>`
 
 Replace `<liquidEditionContractAddress>` with your Sepolia Liquid Edition address. `11155111` is the Sepolia chain ID in the URL.
 
@@ -449,11 +449,11 @@ This repo assumes you already have a Liquid Edition address to target.
 
 For Sepolia, the recommended setup is:
 
-1. Create the Liquid Edition at `dev.superrare.com/create/liquid-edition`.
+1. Create the Liquid Edition at `dev.superrare.co/create/liquid-edition`.
 2. Set `LIQUID_EDITION_ADDRESS` in `.env` to that deployed Liquid Edition address.
 3. Deploy your render contract from this repo.
 4. Register the render contract on the Liquid Edition.
-5. Open `https://dev.superrare.com/liquid-editions/11155111/<liquidEditionContractAddress>` to verify the render in the UI.
+5. Open `https://dev.superrare.co/liquid-editions/11155111/<liquidEditionContractAddress>` to verify the render in the UI.
 
 If you prefer, you can still create Liquid Editions through lower-level contract workflows, but that is not the easiest starting path for most users of this starter kit.
 
@@ -571,13 +571,13 @@ The examples themselves are focused on `ILiquid`, but `ILiquidFactory` is still 
 
 For most users, the easiest way to get a Sepolia Liquid Edition is still:
 
-- create it first in `dev.superrare.com/create/liquid-edition`
+- create it first in `dev.superrare.co/create/liquid-edition`
 - then use this repo to build and register the render contract
 
 ## Suggested Fork Workflow
 
 1. Fork the repo.
-2. Create your Liquid Edition on Sepolia at `dev.superrare.com/create/liquid-edition`.
+2. Create your Liquid Edition on Sepolia at `dev.superrare.co/create/liquid-edition`.
 3. Copy that Liquid Edition contract address into `LIQUID_EDITION_ADDRESS`.
 4. Pick the closer example contract.
 5. Rename the contract to your project name.
@@ -585,5 +585,5 @@ For most users, the easiest way to get a Sepolia Liquid Edition is still:
 7. Update or add tests.
 8. Deploy the renderer to Sepolia first.
 9. Register the renderer on the target Liquid token.
-10. Verify the result in `https://dev.superrare.com/liquid-editions/11155111/<liquidEditionContractAddress>`.
+10. Verify the result in `https://dev.superrare.co/liquid-editions/11155111/<liquidEditionContractAddress>`.
 11. Move to mainnet after validating output.
